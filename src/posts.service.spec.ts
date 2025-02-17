@@ -29,11 +29,11 @@ describe("PostsService", () => {
     });
 
     it("should return correct posts for skip and limit options", () => {
-      const foundPosts = postsService.findMany({ skip: 2, limit: 2 });
+      const foundPosts = postsService.findMany({ skip: 1, limit: 2 });
 
       expect(foundPosts.length).toBe(2);
-      expect(foundPosts[0].text).toBe("Post 3");
-      expect(foundPosts[1].text).toBe("Post 4");
+      expect(foundPosts[0].text).toBe("Post 2");
+      expect(foundPosts[1].text).toBe("Post 3");
     });
 
     it("should return correct found post", () => {
